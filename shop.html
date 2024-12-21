@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #myShop {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .product {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div id="myShop">
+    <a href="https://blameless.myspreadshop.com">blameless</a>
+</div>
+
+<script>
+    var spread_shop_config = {
+        shopName: 'blameless',
+        locale: 'us_US',
+        prefix: 'https://blameless.myspreadshop.com',
+        baseId: 'myShop'
+    };
+
+    var products = [
+        {"Product Name":"Men's Hoodie","SKU":"1067849602-P111A648S2","Product ID":3078664,"Product Description":"Blameless hoodie creature script","Price":32.00,"Image URL 1":"https://image.spreadshirtmedia.com/image-server/v1/products/1b9a7304-3b64-49e3-9215-0fc335f4ea6e/views/2,width=1000,height=1000,appearanceId=648,modelId=1466,crop=list,mediaType=png/1"},
+        {"Product Name":"Men's Hoodie","SKU":"1067849602-P111A648S3","Product ID":3078664,"Product Description":"Blameless hoodie creature script","Price":32.00,"Image URL 1":"https://image.spreadshirtmedia.com/image-server/v1/products/1b9a7304-3b64-49e3-9215-0fc335f4ea6e/views/2,width=1000,height=1000,appearanceId=648,modelId=1466,crop=list,mediaType=png/1"},
+        {"Product Name":"Men's Hoodie","SKU":"1067849602-P111A648S4","Product ID":3078664,"Product Description":"Blameless hoodie creature script","Price":32.00,"Image URL 1":"https://image.spreadshirtmedia.com/image-server/v1/products/1b9a7304-3b64-49e3-9215-0fc335f4ea6e/views/2,width=1000,height=1000,appearanceId=648,modelId=1466,crop=list,mediaType=png/1"},
+        {"Product Name":"Men's Hoodie","SKU":"1067849602-P111A648S5","Product ID":3078664,"Product Description":"Blameless hoodie creature script","Price":32.00,"Image URL 1":"https://image.spreadshirtmedia.com/image-server/v1/products/1b9a7304-3b64-49e3-9215-0fc335f4ea6e/views/2,width=1000,height=1000,appearanceId=648,modelId=1466,crop=list,mediaType=png/1"},
+        {"Product Name":"Men's Hoodie","SKU":"1067849602-P111A648S6","Product ID":3078664,"Product Description":"Blameless hoodie creature script","Price":32.00,"Image URL 1":"https://image.spreadshirtmedia.com/image-server/v1/products/1b9a7304-3b64-49e3-9215-0fc335f4ea6e/views/2,width=1000,height=1000,appearanceId=648,modelId=1466,crop=list,mediaType=png/1"},
+        {"Product Name":"Men's Hoodie","SKU":"1067849602-P111A648S38","Product ID":3078664,"Product Description":"Blameless hoodie creature script","Price":32.00,"Image URL 1":"https://image.spreadshirtmedia.com/image-server/v1/products/1b9a7304-3b64-49e3-9215-0fc335f4ea6e/views/2,width=1000,height=1000,appearanceId=648,modelId=1466,crop=list,mediaType=png/1"},
+        {"Product Name":"Men's Hoodie","SKU":"1067849602-P111A648S94","Product ID":3078664,"Product Description":"Blameless hoodie creature script","Price":32.00,"Image URL 1":"https://image.spreadshirtmedia.com/image-server/v1/products/1b9a7304-3b64-49e3-9215-0fc335f4ea6e/views/2,width=1000,height=1000,appearanceId=648,modelId=1466,crop=list,mediaType=png/1"},
+        {"Product Name":"Men's Hoodie","SKU":"1067849602-P111A648S102","Product ID":3078664,"Product Description":"Blameless hoodie creature script","Price":32.00,"Image URL 1":"https://image.spreadshirtmedia.com/image-server/v1/products/1b9a7304-3b64-49e3-9215-0fc335f4ea6e/views/2,width=1000,height=1000,appearanceId=648,modelId=1466,crop=list,mediaType=png/1"},
+        {"Product Name":"Women’s Premium BLameLess Creature Hoodie","SKU":"1067848757-P444A2S2","Product ID":3078574,"Product Description":"BeLameLess BLameLess Bless SkateBoard Gremlin","Price":33.90,"Image URL 1":"https://image.spreadshirtmedia.com/image-server/v1/products/45d5a37d-70a0-4d65-a48b-2d24486e3a65/views/2,width=1000,height=1000,appearanceId=2,modelId=6354,crop=list,mediaType=png/1"},
+        // Additional products can be added here
+    ];
+
+    function displayProducts() {
+        var shopDiv = document.getElementById('myShop');
+        products.forEach(function(product) {
+            var productDiv = document.createElement('div');
+            productDiv.className = 'product';
+            productDiv.innerHTML = `
+                <h3>${product["Product Name"]}</h3>
+                <p>SKU: ${product["SKU"]}</p>
+                <p>${product["Product Description"]}</p>
+                <p>Price: $${product["Price"].toFixed(2)}</p>
+                <img src="${product["Image URL 1"]}" alt="${product["Product Name"]}">
+            `;
+            shopDiv.appendChild(productDiv);
+        });
+    }
+
+    displayProducts();
+</script>
+
+</body>
+</html>
